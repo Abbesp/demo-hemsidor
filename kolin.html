@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kolin — demohemsida</title>
+<meta name="description" content="En demohemsida för ett produktbolag. En panna, tre storlekar, en korg.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="theme-kolin">
+  <header class="bar">
+    <div class="wrap">
+      <span>Demo</span>
+      <a href="viken.html">Viken</a>
+      <a href="kok.html">Kök 19</a>
+      <a href="kolin.html" class="on">Kolin</a>
+    </div>
+  </header>
+  <header class="top">
+    <div class="wrap">
+      <button type="button" class="brand" data-jump="pannan"><span style="letter-spacing:.22em">Kolin</span></button>
+      <button type="button" class="btn ink sm" data-jump="kop"><span id="head-price">1 090 kr</span></button>
+    </div>
+  </header>
+  <div class="nav" data-nav>
+    <div class="wrap inner">
+      <button type="button" class="nav-btn" data-nav-btn aria-expanded="false">
+        <span><small>Gå till</small><strong data-current>Pannan</strong></span><span aria-hidden="true">▾</span>
+      </button>
+      <p class="hint" data-hint></p>
+      <ul class="menu" data-menu hidden>
+        <li><button type="button" data-go="pannan" data-label="Pannan" data-hint="En kolstålspanna från Skövde. Ingen beläggning, inget set."><strong>Pannan</strong><span>En kolstålspanna från Skövde. Ingen beläggning, inget set.</span></button></li>
+        <li><button type="button" data-go="matt" data-label="Mått" data-hint="24, 28 eller 32 centimeter. Vikten och priset följer med."><strong>Mått</strong><span>24, 28 eller 32 centimeter. Vikten och priset följer med.</span></button></li>
+        <li><button type="button" data-go="kop" data-label="Köp" data-hint="Välj storlek och antal. I demon stannar korgen i webbläsaren."><strong>Köp</strong><span>Välj storlek och antal. I demon stannar korgen i webbläsaren.</span></button></li>
+        <li><button type="button" data-go="skotsel" data-label="Skötsel" data-hint="Hur stålet hålls svart, och varför den inte tål maskin."><strong>Skötsel</strong><span>Hur stålet hålls svart, och varför den inte tål maskin.</span></button></li>
+      </ul>
+    </div>
+  </div>
+  <main>
+    <section data-panel="pannan">
+      <div class="wrap hero c">
+        <div>
+          <p class="kicker">Skövde · kolstål</p>
+          <h1 style="margin-top:1rem">En panna. Inget mer.</h1>
+          <p class="lede">Kolin gör en panna i kolstål. Den är tom när den kommer, och svart efter en vecka vid spisen. Stålet valsas i Hofors. Formen slås och bränns in i Skövde.</p>
+          <p class="muted" id="hero-meta" style="margin-top:1.4rem">28 cm · 1,5 kg · 1 090 kr</p>
+        </div>
+        <img class="shot" style="aspect-ratio:4/3" src="media/kolin-panna.jpg" alt="Svart kolstålspanna på en ljus stenskiva">
+      </div>
+    </section>
+    <section data-panel="matt" hidden>
+      <div class="wrap section">
+        <h2>Tre mått. Samma stål.</h2>
+        <p class="lede">Handtaget är samma längd på alla tre. Det som ändras är ytan du steker på, och vad den väger.</p>
+        <div class="sizes" id="sizes" style="margin-top:2rem;border-top:1px solid var(--line)"></div>
+        <img class="shot" style="aspect-ratio:16/7;margin-top:2rem" src="media/kolin-yta.jpg" alt="Närbild på det inbrända stålet">
+      </div>
+    </section>
+    <section data-panel="kop" hidden>
+      <div class="wrap section grid-2 split">
+        <div>
+          <h2>I korgen.</h2>
+          <p class="lede">Pannan skickas inoljad, i papper, utan plastväska. Frakt inom Sverige ingår över en panna.</p>
+          <img class="shot" style="aspect-ratio:4/3;margin-top:1.5rem" src="media/kolin-panna.jpg" alt="">
+        </div>
+        <form class="card" id="cart">
+          <p class="lbl">Storlek</p>
+          <div class="picks" id="cart-sizes"></div>
+          <p class="lbl" style="margin-top:1.2rem">Antal</p>
+          <div style="display:flex;align-items:center;gap:.75rem">
+            <button type="button" class="step" id="q-minus">–</button>
+            <span class="price" id="q-n">1</span>
+            <button type="button" class="step" id="q-plus">+</button>
+          </div>
+          <p id="sum" style="font-family:var(--display);font-size:2.4rem;margin:1.6rem 0 0">1 090 kr</p>
+          <button class="btn" id="add" style="margin-top:1.2rem" type="submit">Lägg i korgen</button>
+          <p id="added" hidden style="margin-top:1.2rem"></p>
+        </form>
+      </div>
+    </section>
+    <section data-panel="skotsel" hidden>
+      <div class="wrap section">
+        <h2 style="max-width:18ch">Varmt vatten. Torr panna. En droppe olja.</h2>
+        <div class="grid-2" style="margin-top:2.5rem">
+          <div style="border-top:1px solid var(--line);padding-top:1rem"><h3 style="font-size:1.5rem">Efter maten</h3><p class="muted">Skölj med hett vatten. Inget diskmedel om det inte fastnat på riktigt.</p></div>
+          <div style="border-top:1px solid var(--line);padding-top:1rem"><h3 style="font-size:1.5rem">Torrt stål</h3><p class="muted">Sätt tillbaka den på plattan en minut. Vattnet ska bort, inte ligga kvar.</p></div>
+          <div style="border-top:1px solid var(--line);padding-top:1rem"><h3 style="font-size:1.5rem">Inte i maskin</h3><p class="muted">Maskinen tar ytan. En panna som diskas där blir grå och klistrig.</p></div>
+        </div>
+        <p class="muted" style="margin-top:2.5rem;max-width:36rem">Första inbränningen är gjord i verkstan. Ni behöver inte börja från blankt stål.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><p>Kolin · ett påhittat produktbolag</p><p>En vara, tre mått, en korg. Inte en katalog med tjugo saker.</p></div></footer>
+  <script src="assets/site.js"></script>
+  <script>
+    const sizes = [
+      {id:"24", cm:"24 cm", weight:"1,1 kg", price:890, note:"Ett ägg. En person."},
+      {id:"28", cm:"28 cm", weight:"1,5 kg", price:1090, note:"Två portioner. Den de flesta tar."},
+      {id:"32", cm:"32 cm", weight:"1,9 kg", price:1290, note:"När det är fler vid spisen."}
+    ];
+    let size = "28", qty = 1, done = false;
+    const kr = (n) => n.toLocaleString("sv-SE") + " kr";
+    function chosen() { return sizes.find((s) => s.id === size); }
+    function paint() {
+      const c = chosen();
+      document.getElementById("head-price").textContent = kr(c.price);
+      document.getElementById("hero-meta").textContent = `${c.cm} · ${c.weight} · ${kr(c.price)}`;
+      document.getElementById("sizes").innerHTML = sizes.map((s) =>
+        `<button type="button" data-id="${s.id}" class="${s.id===size?"on":""}"><span class="cm">${s.cm}</span><span>${s.note}<span class="muted" style="display:block;margin-top:.25rem">${s.weight} · 3 mm gods</span></span><span class="price">${kr(s.price)}</span></button>`
+      ).join("");
+      document.querySelectorAll("#sizes button").forEach((b) => b.onclick = () => { size = b.dataset.id; done = false; paint(); });
+      document.getElementById("cart-sizes").innerHTML = sizes.map((s) =>
+        `<button type="button" class="chip${s.id===size?" on":""}" data-id="${s.id}">${s.cm}</button>`
+      ).join("");
+      document.querySelectorAll("#cart-sizes button").forEach((b) => b.onclick = () => { size = b.dataset.id; done = false; paint(); });
+      document.getElementById("q-n").textContent = qty;
+      document.getElementById("sum").textContent = kr(c.price * qty);
+      const added = document.getElementById("added");
+      const add = document.getElementById("add");
+      added.hidden = !done;
+      add.hidden = done;
+      added.textContent = `${qty} × ${c.cm} ligger i korgen. Det här är en demo, så inget skickas.`;
+    }
+    document.getElementById("q-minus").onclick = () => { qty = Math.max(1, qty-1); done = false; paint(); };
+    document.getElementById("q-plus").onclick = () => { qty = Math.min(4, qty+1); done = false; paint(); };
+    document.getElementById("cart").addEventListener("submit", (e) => { e.preventDefault(); done = true; paint(); });
+    paint();
+  </script>
+</body>
+</html>

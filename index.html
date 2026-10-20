@@ -4,23 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demohemsidor</title>
-<style>
-body{margin:0;background:#f1ece2;color:#1d201c;font-family:Georgia,serif}
-main{max-width:36rem;margin:0 auto;padding:4rem 1.25rem}
-a{color:#2f4a3a}
-h1{font-weight:400;font-size:3rem}
-li{margin:.8rem 0}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main>
-<h1>Tre hemsidor</h1>
-<p>Påhittade exempel. Öppna var och en.</p>
-<ul>
-<li><a href="viken.html">Viken Ateljé</a> — glas, tyg och lås</li>
-<li><a href="kok.html">Kök 19</a> — kvällskrog</li>
-<li><a href="kolin.html">Kolin</a> — en panna</li>
-</ul>
-</main>
+  <header class="bar">
+    <div class="wrap">
+      <span>Demo</span>
+      <a href="index.html" class="on">Start</a>
+      <a href="viken.html">Viken</a>
+      <a href="kok.html">Kök 19</a>
+      <a href="kolin.html">Kolin</a>
+    </div>
+  </header>
+  <main class="wrap section">
+    <p class="kicker">Tre exempel</p>
+    <h1 style="margin-top:1rem">Påhittade hemsidor.</h1>
+    <p class="lede">Samma slags sida, tre olika ställen. Öppna den som liknar det ni vill visa.</p>
+    <ul class="index-list">
+      <li><a href="viken.html"><strong>Viken Ateljé</strong><span>Glas, möbeltyg och lås. Ljust hantverk i Majorna.</span></a></li>
+      <li><a href="kok.html"><strong>Kök 19</strong><span>En kvällskrog. Mörk meny, åtta bord, en bokning.</span></a></li>
+      <li><a href="kolin.html"><strong>Kolin</strong><span>En panna i kolstål. Tre mått, en korg.</span></a></li>
+    </ul>
+  </main>
 </body>
 </html>
