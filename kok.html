@@ -7,12 +7,15 @@
 <meta name="description" content="En mörk demohemsida för en påhittad kvällskrog. Meny, bord och bokning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/premium.css">
 </head>
 <body class="theme-kok">
   <header class="bar">
     <div class="wrap">
-      <span>Demo</span>
+      <span>Designkoncept / 02</span>
+      <a href="index.html">Alla demos ↗</a>
       <a href="viken.html">Viken</a>
       <a href="kok.html" class="on">Kök 19</a>
       <a href="kolin.html">Kolin</a>
@@ -30,7 +33,7 @@
         <span><small>Gå till</small><strong data-current>Kvällen</strong></span><span aria-hidden="true">▾</span>
       </button>
       <p class="hint" data-hint></p>
-      <ul class="menu" data-menu hidden>
+      <ul class="menu" data-menu>
         <li><button type="button" data-go="kvall" data-label="Kvällen" data-hint="En krog på Södermalm som bara har kväll. Åtta bord, ingen lunch."><strong>Kvällen</strong><span>En krog på Södermalm som bara har kväll. Åtta bord, ingen lunch.</span></button></li>
         <li><button type="button" data-go="meny" data-label="Menyn" data-hint="Kvällens kort. Sex rätter, och vin om man vill se det."><strong>Menyn</strong><span>Kvällens kort. Sex rätter, och vin om man vill se det.</span></button></li>
         <li><button type="button" data-go="bord" data-label="Borden" data-hint="Vilka bord som är lediga, för hur många, och vilken tid."><strong>Borden</strong><span>Vilka bord som är lediga, för hur många, och vilken tid.</span></button></li>
@@ -38,24 +41,26 @@
       </ul>
     </div>
   </div>
-  <main>
+  <a class="skip-link" href="#main-content">Till innehållet</a>
+  <main id="main-content">
     <section data-panel="kvall">
       <div class="wrap hero k">
         <div>
           <p class="kicker">Södermalm · bara kväll</p>
-          <h1 style="margin-top:1rem">Mat att sitta kvar för.</h1>
-          <p class="lede">Ett litet kök, åtta bord, en meny som byts när säsongen gör det. Ingen lunch. Ingen högtalare i taket.</p>
-          <div class="actions"><button type="button" class="btn" data-jump="bord">Boka ett bord</button></div>
+          <h1 style="margin-top:1rem">En kväll.<br>Lite längre.</h1>
+          <p class="lede">Säsongen på tallriken. Något gott i glaset. Åtta bord på Södermalm, och all tid för det som händer runt dem.</p>
+          <div class="actions"><button type="button" class="btn" data-jump="bord">Boka ett bord ↗</button><button type="button" class="btn ghost" data-jump="meny">Upptäck menyn</button></div>
         </div>
-        <img class="shot" style="aspect-ratio:16/10" src="media/kok-room.jpg" alt="Mörk matsal med ett tänt ljus">
+        <img decoding="async" class="shot" style="aspect-ratio:16/10" src="media/kok-room.jpg" alt="Mörk matsal med ett tänt ljus">
       </div>
+<div class="band"><div class="wrap"><div class="detail-strip"><span>Åtta bord</span><span>Säsongens råvaror</span><span>Södermalm, Stockholm</span></div></div></div><div class="wrap section editorial"><img loading="lazy" src="media/kok-plate.jpg" alt="Råvaran får bestämma"><div><p class="kicker">Råvaran får bestämma</p><h2>Ett litet kök.<br>En stor del av kvällen.</h2><p class="lede">Vi tycker om när ett besök blir en hel kväll. När brödet får ta slut, glasen fylls på och samtalet hittar sin egen takt. Välkommen in till vårt Södermalm.</p><button type="button" class="btn ghost" data-jump="meny">Se kvällens meny ↗</button></div></div>
     </section>
     <section data-panel="meny" hidden>
       <div class="wrap section">
         <div class="row-between">
           <div>
             <h2>Kvällens kort.</h2>
-            <p class="lede">Sex rätter. Filtret visar hur en meny kan delas utan att bli en pdf.</p>
+            <p class="lede">Ett kort som följer säsongen. Börja med något litet, dela något gott och låt kvällen ta sin tid.</p>
           </div>
           <button type="button" class="btn sm" id="wine">Vin på</button>
         </div>
@@ -74,8 +79,8 @@
           <li data-cat="sott"><div><p style="font-family:var(--display);font-size:1.6rem;margin:0">Ostkaka</p><p class="muted dish" data-note="hjortron, grädde" data-wine="Riesling">hjortron, grädde · Riesling</p></div><span class="price">115</span></li>
         </ul>
         <div class="grid-2 split" style="margin-top:2rem">
-          <img class="shot" style="aspect-ratio:4/3" src="media/kok-plate.jpg" alt="En tallrik torsk i svagt ljus">
-          <img class="shot" style="aspect-ratio:4/3" src="media/kok-hands.jpg" alt="Händer som lägger upp en dessert">
+          <img decoding="async" class="shot" style="aspect-ratio:4/3" src="media/kok-plate.jpg" alt="En tallrik torsk i svagt ljus">
+          <img decoding="async" class="shot" style="aspect-ratio:4/3" src="media/kok-hands.jpg" alt="Händer som lägger upp en dessert">
         </div>
       </div>
     </section>
@@ -121,6 +126,7 @@
     </section>
   </main>
   <footer><div class="wrap"><p>Kök 19 · ett påhittat exempel</p><p>Mörkt tema, annan bransch, samma slags demo.</p></div></footer>
+  <div class="demo-note">Fiktivt designkoncept · Bilder, priser och omdömen är exempel. Bokningar och köp är endast demonstrationer.</div>
   <script src="assets/site.js"></script>
   <script>
     let wine = true;

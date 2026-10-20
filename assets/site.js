@@ -15,7 +15,7 @@
       const item = nav.querySelector(`[data-go="${id}"]`);
       if (current && item) current.textContent = item.dataset.label;
       if (hint && item) hint.textContent = item.dataset.hint;
-      menu.hidden = true;
+      menu.hidden = false;
       btn.setAttribute("aria-expanded", "false");
     }
     btn.addEventListener("click", () => {
@@ -28,7 +28,7 @@
     });
     document.addEventListener("click", (event) => {
       if (!nav.contains(event.target)) {
-        menu.hidden = true;
+        menu.hidden = false;
         btn.setAttribute("aria-expanded", "false");
       }
     });
@@ -75,6 +75,7 @@
         const answer = item.querySelector("[data-a]");
         const mark = item.querySelector("[data-mark]");
         const on = i === index;
+        item.querySelector('button').setAttribute('aria-expanded', String(on));
         answer.hidden = !on;
         if (mark) mark.textContent = on ? "–" : "+";
       });

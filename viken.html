@@ -7,23 +7,20 @@
 <meta name="description" content="En demohemsida för ett påhittat hantverksföretag. Tjänster, galleri, bokning och priser.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/premium.css">
 </head>
 <body>
   <header class="bar">
     <div class="wrap">
-      <span>Demo</span>
+      <span>Designkoncept / 01</span>
+      <a href="index.html">Alla demos ↗</a>
       <a href="viken.html" class="on">Viken</a>
       <a href="kok.html">Kök 19</a>
       <a href="kolin.html">Kolin</a>
     </div>
   </header>
-  <div style="background:var(--foam);border-bottom:1px solid var(--line)">
-    <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;padding-top:.7rem;padding-bottom:.7rem">
-      <p style="margin:0;font-size:.95rem">Ljust hantverk. Inblickarna går att dölja.</p>
-      <button type="button" class="btn sm" data-insight-toggle>Dölj inblickar</button>
-    </div>
-  </div>
   <header class="top">
     <div class="wrap">
       <button type="button" class="brand" data-jump="hem">
@@ -40,7 +37,7 @@
         <span aria-hidden="true">▾</span>
       </button>
       <p class="hint" data-hint></p>
-      <ul class="menu" data-menu hidden>
+      <ul class="menu" data-menu>
         <li><button type="button" data-go="hem" data-label="Hem" data-hint="Ateljén i Majorna. Glas, möbeltyg och lås på samma adress."><strong>Hem</strong><span>Ateljén i Majorna. Glas, möbeltyg och lås på samma adress.</span></button></li>
         <li><button type="button" data-go="verkstan" data-label="Verkstan" data-hint="Vad de tar sig an, hur lång tid det tar och vad det brukar kosta."><strong>Verkstan</strong><span>Vad de tar sig an, hur lång tid det tar och vad det brukar kosta.</span></button></li>
         <li><button type="button" data-go="arbete" data-label="Arbete" data-hint="Samma rum före och efter, och hur det ser ut på bänken."><strong>Arbete</strong><span>Samma rum före och efter, och hur det ser ut på bänken.</span></button></li>
@@ -49,21 +46,22 @@
     </div>
   </div>
 
-  <main>
+  <a class="skip-link" href="#main-content">Till innehållet</a>
+  <main id="main-content">
     <section data-panel="hem">
       <div class="wrap hero v">
         <div>
           <p class="insight">Inblick · första skärmen ska säga vad stället är</p>
-          <p class="kicker">Glas · textil · lås</p>
-          <h1 style="margin-top:1rem">Det som gått sönder kan bli snyggt igen.</h1>
-          <p class="lede">Viken Ateljé i Majorna tar glas, möbeltyg och lås som inte beter sig. Ett besök, ett rakt svar, ett jobb som blir klart.</p>
+          <p class="kicker">Hantverk för det som ska hålla</p>
+          <h1 style="margin-top:1rem">Värt att<br>ta hand om.</h1>
+          <p class="lede">Vi ger det du redan älskar ett liv till. Glas, möbler och varsamma reparationer — från vår ateljé i hjärtat av Majorna.</p>
           <div class="actions">
             <button type="button" class="btn" data-jump="boka">Boka ett besök</button>
             <button type="button" class="btn ghost" data-jump="verkstan">Se tjänsterna</button>
           </div>
         </div>
         <figure style="margin:0">
-          <img class="shot" style="aspect-ratio:4/3" src="media/workshop.jpg" alt="Ljus verkstad med ekbänk och glas">
+          <img decoding="async" class="shot" style="aspect-ratio:4/3" src="media/workshop.jpg" alt="Ljus verkstad med ekbänk och glas">
           <figcaption class="cap">Allmänna vägen 12, Majorna</figcaption>
         </figure>
       </div>
@@ -75,6 +73,7 @@
           <article><h3>Klart i tid</h3><p>Datumet ni får är det datumet som gäller.</p></article>
         </div>
       </div>
+<div class="band"><div class="wrap"><div class="detail-strip"><span>Glas på mått</span><span>Textil med karaktär</span><span>Ett personligt bemötande</span></div></div></div><div class="wrap section editorial"><img loading="lazy" src="media/textile.jpg" alt="Omsorg, från första samtalet"><div><p class="kicker">Omsorg, från första samtalet</p><h2>Händer som kan. Material som lever.</h2><p class="lede">Vi tror på att laga, vårda och förfina. Från den ärvda stolen till glaset som släpper in morgonljuset. Hos oss börjar varje arbete med att se vad som finns kvar att älska.</p><button type="button" class="btn ghost" data-jump="verkstan">Utforska verkstan ↗</button></div></div>
     </section>
 
     <section data-panel="verkstan" hidden>
@@ -147,7 +146,7 @@
           </div>
           <div>
             <p class="insight">Inblick · omdömen, korta och specifika</p>
-            <h2>Det andra säger.</h2>
+            <h2>Röster från kvarteret.</h2>
             <div class="quote"><p>Spegeln satt rätt första gången. Inget mer att säga.</p><small>Karin, Majorna</small></div>
             <div class="quote"><p>Stolen är samma stol. Bara att man vill sitta i den igen.</p><small>Erik, Olskroken</small></div>
             <div class="quote"><p>Låset byttes innan lunchen. Nycklarna fick namn.</p><small>Maja, Linné</small></div>
@@ -216,7 +215,7 @@
           <p class="insight">Inblick · adress och ett kort meddelande</p>
           <h2>Kom förbi, eller skriv.</h2>
           <p class="muted">Allmänna vägen 12, Majorna. Ring 031-00 00 00.</p>
-          <img class="shot" style="aspect-ratio:4/3;margin-top:1.5rem" src="media/hands.jpg" alt="Händer som passar in en glasskiva">
+          <img decoding="async" class="shot" style="aspect-ratio:4/3;margin-top:1.5rem" src="media/hands.jpg" alt="Händer som passar in en glasskiva">
         </div>
         <form id="note" class="card" style="align-self:end">
           <div id="note-form">
@@ -228,7 +227,8 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><p>Viken Ateljé · ett påhittat exempel</p><p>Demo för att visa bredd, inte en färdig kundsida.</p></div></footer>
+  <footer><div class="wrap"><p>Viken Ateljé · ett påhittat exempel</p><p>Glas. Textil. Omsorg. · Majorna, Göteborg</p></div></footer>
+  <div class="demo-note">Fiktivt designkoncept · Bilder, priser och omdömen är exempel. Bokningar och köp är endast demonstrationer.</div>
   <script src="assets/site.js"></script>
   <script>
     const days = ["Söndag","Måndag","Tisdag","Onsdag","Torsdag","Fredag","Lördag"];
