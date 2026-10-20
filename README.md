@@ -1,17 +1,12 @@
 # demo-hemsidor
 
-Tre demohemsidor i ett repo: Viken Ateljé, Kök 19 och Kolin.
+Tre demohemsidor: Viken Ateljé, Kök 19 och Kolin.
 
-Publika sidor:
-
-- https://cdn.jsdelivr.net/gh/Abbesp/demo-hemsidor@main/index.html
-- https://cdn.jsdelivr.net/gh/Abbesp/demo-hemsidor@main/viken.html
-- https://cdn.jsdelivr.net/gh/Abbesp/demo-hemsidor@main/kok.html
-- https://cdn.jsdelivr.net/gh/Abbesp/demo-hemsidor@main/kolin.html
-
-GitHub Pages (när det är påslaget under Settings → Pages → GitHub Actions):
+Publika länkar, när GitHub Pages är på (Settings → Pages → GitHub Actions):
 
 - https://abbesp.github.io/demo-hemsidor/
 - https://abbesp.github.io/demo-hemsidor/viken.html
 - https://abbesp.github.io/demo-hemsidor/kok.html
 - https://abbesp.github.io/demo-hemsidor/kolin.html
+
+Källan ligger i det här repot. Workflowet `.github/workflows/pages.yml` publicerar vid varje push till `main`.
